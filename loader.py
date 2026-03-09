@@ -4,7 +4,7 @@ import CubeHelper.ListsLogic.MaterialLists  as MaterialLists
 async def load(client: commands.Bot):
     print(f'\nLoading\t\tAddon\t\t{addon_name}')
     BASE_DIR = os.path.dirname(os.path.realpath(__file__))
-    cogs = [os.path.join(addon_name, 'Commands'), os.path.join(addon_name, 'ContextMenus')]
+    cogs = [os.path.join(BASE_DIR, 'Commands'), os.path.join(BASE_DIR, 'ContextMenus')]
 
     for cog in cogs:
         scripts = [filename for filename in os.listdir(cog) if filename.endswith('.py')]
