@@ -3,6 +3,7 @@ import CubeHelper.ListsLogic.MaterialLists  as MaterialLists
 
 async def load(client: commands.Bot):
     print(f'\nLoading\t\tAddon\t\t{addon_name}')
+    BASE_DIR = os.path.dirname(os.path.realpath(__file__))
     cogs = [os.path.join(addon_name, 'Commands'), os.path.join(addon_name, 'ContextMenus')]
 
     for cog in cogs:
