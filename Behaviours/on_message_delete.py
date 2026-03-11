@@ -3,7 +3,7 @@ from ..modules import *
 
 import CubeHelper.ListsLogic.MaterialLists as MaterialLists
 
-class on_message_delete(commands.Cog):
+class CubeHelperOnMessageDelete(commands.Cog):
     def __init__(self, client: commands.Bot):
         self.client = client
 
@@ -13,4 +13,4 @@ class on_message_delete(commands.Cog):
             MaterialLists.UpdateListInfo(message.id, {'state':'deactivated'})
     
 async def setup(client: commands.Bot):
-    await client.add_cog(on_message_delete(client))
+    await client.add_cog(CubeHelperOnMessageDelete(client))

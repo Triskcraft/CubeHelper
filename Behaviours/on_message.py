@@ -6,7 +6,7 @@ import CubeHelper.ListsLogic.ConfigsManagement as ConfigsManagement
 import CubeHelper.Banners.Introduction as Introduction
 
 
-class on_message(commands.Cog):
+class CubeHelperOnMessage(commands.Cog):
     def __init__(self, client: commands.Bot):
         self.client = client
 
@@ -52,4 +52,4 @@ class on_message(commands.Cog):
             await message.channel.send(invite.url)
 
 async def setup(client: commands.Bot):
-    await client.add_cog(on_message(client))
+    await client.add_cog(CubeHelperOnMessage(client))
