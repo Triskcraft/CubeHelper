@@ -10,7 +10,9 @@ async def load(client: commands.Bot):
         scripts = [filename for filename in os.listdir(cog) if filename.endswith('.py')]
         for script in scripts:
             try:
-                await client.load_extension(f'{cog.replace(os.sep,".")}.{script[:-3]}')
+                parent, ccog = cog.split(os.sep)[-2:]
+                module = os.path.join(parent, ccog, script).replace(os.sep, ".")[:-3]
+                await client.load_extension(module)
                 print(f'   • Loaded {os.path.basename(cog[:-1])} {script[:-3]}')
             except Exception:
                 print(f'   • Unable to load {os.path.basename(cog[:-1])} {script[:-3]}')
