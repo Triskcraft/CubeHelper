@@ -17,12 +17,6 @@ async def load(client: commands.Bot):
             except Exception:
                 print(f'   • Unable to load {os.path.basename(cog[:-1])} {script[:-3]}')
 
-    await client.change_presence(
-            activity = discord.CustomActivity(
-            name = presence_message,
-            status = discord.Status.online)
-        )
-    
     print(f'   • Updating Logs...')
     await MaterialLists.updateStates(client)
     print(f'   • Logs updated')
