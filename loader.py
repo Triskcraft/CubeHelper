@@ -16,11 +16,6 @@ async def load(client: commands.Bot):
                 print(f'   • Loaded {os.path.basename(cog[:-1])} {script[:-3]}')
             except Exception:
                 print(f'   • Unable to load {os.path.basename(cog[:-1])} {script[:-3]}')
-    
-    if under_maintenance:
-        presence_message            = 'Under Maintenance'
-    else:
-        presence_message            = 'Use /help'
 
     await client.change_presence(
             activity = discord.CustomActivity(
