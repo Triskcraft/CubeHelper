@@ -13,4 +13,4 @@ class on_message_delete(commands.Cog):
             MaterialLists.UpdateListInfo(message.id, {'state':'deactivated'})
     
 async def setup(client: commands.Bot):
-    await client.add_cog(on_message(client))
+    await client.add_cog(on_message_delete(client))
