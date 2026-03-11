@@ -1,10 +1,7 @@
 # Cube Helper
 ![Cube Helper Banner](https://github.com/mjpr-3435/CubeHelper/blob/master/Database/Images/Logo%20Banner%20GH.png)
 
-Cube Helper is a bot designed to generate interactive material lists, facilitating coordination among server members when farming materials. 
-
-**Bot invite**:  
-[Invite the bot to your server](https://discord.com/api/oauth2/authorize?client_id=1208898496237805630&permissions=8&scope=bot)
+Cube Helper is a [MCDis plugin](https://github.com/mjpr-3435/McDis-RCON) designed to generate interactive material lists, facilitating coordination among server members when farming materials. 
 
 ## Collaboration
 

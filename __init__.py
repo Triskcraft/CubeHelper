@@ -1,7 +1,6 @@
 import asyncio
 
 from .loader import load
-from .Functions import call_behaviours
 from mcdis_rcon.classes import McDisClient
 
 class mdaddon():
